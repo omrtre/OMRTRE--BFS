@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Environmental Health Literacy</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(246, 240, 227);
+            font-family: Futura Next Book;
+        }
+
+        header {
+            background-color: rgb(106, 159, 243);
+            color: rgb(11, 13, 84);
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            filter: drop-shadow(0px 5px 15px rgb(172, 155, 134));
+        }
+
+        #title {
+            margin: 0;
+        }
+
+        #subtitle {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        #logo {
+            width: 50px; /* Adjust the width as needed */
+            margin-left: 10px;
+        }
+
+        nav {
+            align-self: end;
+            text-decoration-line: line-through;
+            text-decoration: dotted;
+        }
+
+        nav a {
+            color: white;
+            padding: 0 20px;
+        }
+
+        nav a:hover {
+            color: yellow;
+            padding: 0 20px;
+            font-style: oblique;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(246, 240, 227);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        form {
+        margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(106, 159, 243);;
+            color: white;
+            padding: 30px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: gray;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            padding: 50px 0;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd; /* Placeholder background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social-icons img {
+            width: 40px; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        #subscribe-box {
+            flex-basis: 300px;
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .subscribe-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(106, 159, 243);;
+            color: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .subscribe-box input {
+            width: 70%;
+            padding: 8px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+
+        .subscribe-box button {
+            width: 100%;
+            background-color: #fff;
+            color: rgb(106, 159, 243);;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn {
+            background-color: rgb(106, 159, 243);;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .subscribe-btn p {
+            font-style: bold;
+        }
+
+        section {
+            background-color: rgba(162, 157, 110, 0.2);
+            margin: 50px 0px;
+            padding: 10px 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div style="display: flex; flex-direction: row;">
+            <div style="padding: 20px;">
+                <img src="/assets/images/site.png"  width="100px" height="auto" alt="logo">
+            </div>
+            <div style="padding: 20px;">
+                <h1 id="title">Environmental Health Literacy</h1>
+                <p  style="font-style: italic;" id="title-subtitle">A repository of health literacy information</p>   
+            </div>
+        </div>  
+        <nav>
+            <a id="1" href="#health-literacy">📖 Health Literacy</a>
+            <a id="2" href="#injustice-racism">✊🏿 Injustice & Racism</a>
+            <a id="3" href="#health-pollutants">⛑ Health & Pollutants</a>
+            <a id="4" href="#resources">📚 Resources</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="health-literacy">
+            <h2>1. What is Environmental Health Literacy?</h2>
+            <p>Environmental Health Literacy is the study and skill to improve public health through the use of health literacy information and environmental literacy. For more information, refer to the following sources:</p>
+            <ul>
+                <li><a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-022-12561-x">Source 1</a></li>
+                <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-94108-0_1">Source 2</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8583686/">Source 3</a></li>
+            </ul>
+            <p style="text-align: right; font-style: italic;">More details...</p>
+        </section>
+
+        <section id="injustice-racism">
+            <h2>2. What is environmental injustice and environmental racism?</h2>
+            <p>Environmental racism is a form of racism in which a race is forced to live in or near unsafe conditions that could later impact their health. Environmental Injustice is harm to the environment that creates a split between races/groups/communities due to the state of their environmental living conditions. For more information, refer to the following sources:</p>
+            <ul>
+                <li><a href="https://www.weforum.org/agenda/2020/07/what-is-environmental-racism-pollution-covid-systemic/">Source 1</a></li>
+                <li><a href="https://www.medicalnewstoday.com/articles/environmental-racism">Source 2</a></li>
+                <li><a href="https://bencrump.com/environmental-justice-lawyer/what-causes-environmental-injustice/">Source 3</a></li>
+            </ul>
+            <p style="text-align: right; font-style: italic;">More details...</p>
+        </section>
+
+        <section id="health-pollutants">
+            <h2>3. What are Environmental Health Pollutants? (ex. PFA's) </h2>
+            <p>Environmental racism is a form of racism in which a race is forced to live in or near unsafe conditions that could later impact their health. Environmental Injustice is harm to the environment that creates a split between races/groups/communities due to the state of their environmental living conditions. For more information, refer to the following sources:</p>
+            <ul>
+                <li><a href="https://www.weforum.org/agenda/2020/07/what-is-environmental-racism-pollution-covid-systemic/">Source 1</a></li>
+                <li><a href="https://www.medicalnewstoday.com/articles/environmental-racism">Source 2</a></li>
+                <li><a href="https://bencrump.com/environmental-justice-lawyer/what-causes-environmental-injustice/">Source 3</a></li>
+            </ul>
+            <p style="text-align: right; font-style: italic;">More details...</p>
+        </section>
+
+        <section id="resources">
+            <h2>4. What are some resources in Cumberland County?</h2>
+            <p>Below are given links and resources that help educate about the cause:</p>
+            <ul>
+                <li><a href="https://www.weforum.org/agenda/2020/07/what-is-environmental-racism-pollution-covid-systemic/">Source 1</a></li>
+                <li><a href="https://www.medicalnewstoday.com/articles/environmental-racism">Source 2</a></li>
+                <li><a href="https://bencrump.com/environmental-justice-lawyer/what-causes-environmental-injustice/">Source 3</a></li>
+            </ul>
+            <p style="text-align: right; font-style: italic;">More details...</p>
+        </section>
+
+        <section id="videos">
+            <h2>Infotainment & Educational Movies</h2>
+            <p>Various videos to help educate about the cause.</p>
+            <div id="video-section" style="margin-top: 30px;  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; justify-content: space-evenly;">
+                
+                <div class="video-thumbnail">
+                    <img src="video-thumbnail-placeholder1.jpg" alt="Video Thumbnail 1">
+                </div>
+                <div class="video-thumbnail">
+                    <img src="video-thumbnail-placeholder2.jpg" alt="Video Thumbnail 2">
+                </div>
+                <div class="video-thumbnail">
+                    <img src="video-thumbnail-placeholder3.jpg" alt="Video Thumbnail 3">
+                </div>
+                <div class="video-thumbnail">
+                    <img src="video-thumbnail-placeholder1.jpg" alt="Video Thumbnail 4">
+                </div>
+                <div class="video-thumbnail">
+                    <img src="video-thumbnail-placeholder2.jpg" alt="Video Thumbnail 5">
+                </div>
+                <div class="video-thumbnail">
+                    <img src="video-thumbnail-placeholder3.jpg" alt="Video Thumbnail 6">
+                </div>
+                <!-- Add more video thumbnails as needed -->
+            </div>
+        </section>
+
+    
+        <!-- 
+        <div id="subscribe-box">
+            <h2>Subscribe to Our Email List</h2>
+            <p>Stay updated on environmental health issues.</p>
+            
+            <form action="#" method="post" id="subscribe-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        -->
+
+        <!-- Subscribe Button -->
+        <button class="subscribe-btn" onclick="toggleSubscribeBox()">Subscribe</button>
+
+        <!-- Subscribe Box -->
+        <div class="subscribe-box" id="subscribeBox">
+            <label for="email">Subscribe to our Email List:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </div>
+
+        <script>
+            function toggleSubscribeBox() {
+                var subscribeBox = document.getElementById('subscribeBox');
+                subscribeBox.style.display = (subscribeBox.style.display === 'none' || !subscribeBox.style.display) ? 'block' : 'none';
+            }
+        </script>
+
+    </main>
+
+    <footer style="height: auto; padding: 20px; background-color: #0056b3; display: flex; flex-direction: column;">
+        <div>
+            <h2 style="color: #fff;">Follow Us on Social Media!</h2>
+            <p id="title-subtitle">Brought to you by "Black Feminist Scholars" group.</p>     
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/YourPage" target="_blank" title="Facebook">
+                <img style="filter: invert();" src="/assets/images/icon_facebook.png" alt="Facebook Icon">
+            </a>
+    
+            <a href="https://twitter.com/YourTwitter" target="_blank" title="Twitter">
+                <img style="filter: invert();" src="/assets/images/icon_twitter.png" alt="Twitter Icon">
+            </a>
+    
+            <a href="https://www.instagram.com/YourInstagram" target="_blank" title="Instagram">
+                <img style="filter: invert();" src="/assets/images/icon_instagram.png" alt="Instagram Icon">
+            </a>
+
+            <a href="https://www.whatsapp.com/xxx" target="_blank" title="Facebook">
+                <img style="filter: invert();" src="/assets/images/icon_whatsapp.png" alt="Facebook Icon">
+            </a>
+    
+            <a href="https://linkedin.com/xxx" target="_blank" title="Twitter">
+                <img style="filter: invert();" src="/assets/images/icon_linkedin.png" alt="Twitter Icon">
+            </a>
+    
+            <a href="https://www.youtube.com/xxx" target="_blank" title="Instagram">
+                <img style="filter: invert();" src="/assets/images/icon_youtube.png" alt="Instagram Icon">
+            </a>
+            
+        </div>
+    </footer>
+
+</body>
+
+</html>
